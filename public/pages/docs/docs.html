@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%=title%></title>
+        <%- storage %>
+    </head>
+    <body>
+        <!-- <link rel="stylesheet" href="lib/highlight/arduino-light.css"> -->
+        <!-- <link rel="stylesheet" href="lib/highlight/color-brewer.css"> -->
+        <!-- <link rel="stylesheet" href="lib/highlight/vs.css"> -->
+        <link rel="stylesheet" href="lib/highlight/github.css">
+        <!-- <link rel="stylesheet" href="lib/highlight/github-gist.css"> -->
+        <!-- <link rel="stylesheet" href="lib/highlight/monokai-sublime.css"> -->
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+              <div class="page-component">
+                <div class="page-component__content">
+                  <sliderComponent :sliderData="sliderData" :articalId="articalId" :platId="platId" :moduleId="moduleId"></sliderComponent>
+                  <contentComponent :pageContent="pageContent" :articalData="articalData"></contentComponent>
+                  <div class="footer-nav">
+                    <a class="footer-nav-link footer-nav-left" :class="{'not-allowed': !hasPreArtical}" :href="hasPreArtical ? 'docs?id='+preAndNextArtical.preArtical.id : 'javascript:void(0);'">
+                      <i class="fa fa-angle-left"></i>
+                      上一篇
+                    </a>
+                    <a class="footer-nav-link footer-nav-right" :class="{'not-allowed': !hasNextArtical}" :href="hasNextArtical ? 'docs?id='+preAndNextArtical.nextArtical.id : 'javascript:void(0);'">
+                      下一篇
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                  <commentComponent :pageComment="pageComment"></commentComponent>
+                </div>
+              </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

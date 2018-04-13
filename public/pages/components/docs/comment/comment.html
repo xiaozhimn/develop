@@ -1,0 +1,58 @@
+<div id="comment" class="clearfix">
+    <div id="comment-info" class="clearfix">
+
+        <span class="praise"  @click="praise"><i class="icon-zan iconfont"></i>{{pageComment.thumUpCount}}赞</span>
+    </div>
+    <div id='comment-area'></div>
+    <div id="summit " class="clearfix">
+        <button class="btn btn-default" style="margin-top: 5px;float: right;" @click="comment">确定</button>
+    </div>
+
+    <div id="lists" v-for="(item,index) in pageComment.list">
+        <div class="comment-list" >
+            <div class="comment-box clearfix">
+                <img class="portrait" src="../../images/avatar.png" alt/>
+                <div class="comment-content">
+                    <p class="comment-name">{{item.username}}</p>
+                    <p class="comment-text" v-html="item.comment_content"></p>
+                    <p class="comment-time">时间：{{item.create_time | utcToLocal}}</p>
+                </div>
+
+                <div class="replay" @click="authorReplay(item)">
+                    <i class="icon-Reply iconfont"></i>
+                    <span>回复</span>
+                </div>
+            </div>
+        </div>
+        <div class="replay-box clearfix" v-if="item.authorReplayComment">
+            <img class="portrait" src="../../images/avatar-client.png" alt/>
+            <span></span>
+            <textarea v-model="item.authorReplayDetail" v-on:keydown="showLeftWord(item)" v-on:keyup="showLeftWord(item)" maxlength="500"></textarea>
+
+            <span class="left-word">{{item.leftWord}}字</span>
+            <div class="replay-footer">
+                <button class="btn btn-cancle" @click="item.authorReplayComment=false">取消</button>
+                <button class="btn btn-default" @click="authorReplaySummit(item)">提交</button>
+            </div>
+        </div>
+        <div class="replay-list clearfix" v-for="replayItem in item.replerList">
+            <div class="comment-box clearfix">
+                <div style=" padding-left: 40px;">
+                    <img class="portrait" src="../../images/avatar-client.png" alt/>
+                    <div class="comment-content">
+                        <p class="comment-name">{{replayItem.username}}</p>
+                        <p class="comment-text">{{replayItem.content}}</p>
+                        <p class="comment-time">时间：{{replayItem.create_time | utcToLocal}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--<div id="showmore" class="showmore">-->
+        <!--<button class="btn btn-default" @click="showMoreComments">查看更多评论</button>-->
+    <!--</div>-->
+
+</div>

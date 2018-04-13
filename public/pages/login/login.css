@@ -1,0 +1,101 @@
+body{
+    background: url("/images/bg.png") no-repeat center;
+    background-size: cover;
+}
+#content-box{
+    padding-top: 160px;
+}
+.main{
+    width:360px;
+    margin:0 auto;
+    h3{
+        height:36px;
+        line-height: 36px;
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 70px;
+    }
+    .form-group{
+        position: relative;
+        height:46px;
+        line-height:44px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 30px;
+        &:nth-child(2){
+            margin-bottom: 40px;
+        }
+        &.form-group-login{
+            border-bottom: none;
+        }
+        input,
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            font-size: 18px;
+            color:rgba(255, 255, 255, 0.6);
+            background: url("/images/inputbg.png") no-repeat center;
+            background-size: cover;
+            border:none;
+            outline:none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            -webkit-transition-delay: 99999s;
+            -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+        }
+        input::-webkit-input-placeholder {
+            color: #fff;
+            opacity: 0.6;
+        }
+        input:-moz-placeholder {
+            color: #fff;
+            opacity: 0.6;
+        }
+        input::-moz-placeholder {
+            color: #fff;
+            opacity: 0.6;
+        }
+        input:-ms-input-placeholder {
+            color: #fff;
+            opacity: 0.6;
+        }
+        .form-control{
+            height:44px;
+            line-height: 44px;
+            text-indent: 32px;
+        }
+        .ico {
+            position: absolute;
+            display: inline-block;
+            width:44px;
+            height: 44px;
+            background-repeat: no-repeat;
+            background-position: center;
+            &.username-ico{
+                background-image: url("/images/username.svg");
+            }
+            &.password-ico{
+                background-image: url("/images/password.svg");
+            }
+        }
+        .btn{
+            height: 44px;
+            line-height:30px;
+            font-size: 18px;
+            color: #5087FB;
+        }
+    }
+    .forget-password{
+        height: 18px;
+        line-height: 18px;
+        font-size: 16px;
+        margin-bottom:100px;
+        a{
+            color: #fff;
+            &:hover{
+                 color: #ddd;
+             }
+        }
+    }
+}

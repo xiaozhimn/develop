@@ -1,0 +1,49 @@
+<div class="slider-component">
+	<ul v-if="sliderData && sliderData.length">
+		<li v-for="item in sliderData">
+			<a href="/team" v-if="item.name==='团队'" :class="['team-item',{'active':platId==='team'}]">{{item.name}}</a>
+			<a href="/tplList" target="_blank" v-else-if="item.name==='样式库'" :class="['main-item',{'active':item.isActive&&item.id==platId&&item.children.length},{'opened':item.isActive&&item.id!=platId&&item.children.length},{'closed':item.isActive===false&&item.id==platId&&item.children.length}]">{{item.name}}</a>
+			<a href="javascript:void(0);" v-else @click="handelClick(item.id, item)" :class="['main-item',{'active':item.isActive&&item.id==platId&&item.children.length},{'opened':item.isActive&&item.id!=platId&&item.children.length},{'closed':item.isActive===false&&item.id==platId&&item.children.length}]">{{item.name}}</a>
+			<ul class="slider__sub-second" v-if="item.children && item.children.length" v-show="item.isActive">
+				<li v-for="node in item.children" :class="{'active':node.id==articalId}">
+					<a v-if="node.hasNext" href="javascript:void(0);" @click="handelClick(node.id, node)" class="dark" :class="['main-item',{'active':node.isActive&&node.id==moduleId&&node.children.length},{'opened':node.isActive&&node.id!=moduleId&&node.children.length},{'closed':node.isActive===false&&node.id==moduleId&&node.children.length}]">{{node.name}}</a>
+					<a v-else :href="'/docs?id='+node.id">{{node.name}}</a>
+					<ul class="slider__sub-third" v-if="node.hasNext && node.children && node.children.length" v-show="node.isActive">
+						<li v-for="subNode in node.children" :class="{'active':subNode.id==articalId}">
+							<a :href="'/docs?id='+subNode.id">{{subNode.name}}</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- <ul>
+		<li><a href="">更新日志</a></li>
+		<li><a href="">UE2 Angular</a></li>
+		<li><a href="">UE2 React</a></li>
+		<li>
+			<a href="">开发指南</a>
+			<ul>
+				<li class="active"><a href="">安装</a></li>
+				<li><a href="">快速上手</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">全局样式</a>
+			<ul>
+				<li><a href="">Color色彩</a></li>
+				<li><a href="">表格</a></li>
+				<li><a href="">Radio单选框</a></li>
+				<li><a href="">Checkbox复选框</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">公共组件</a>
+			<ul>
+				<li><a href="">Dialog</a></li>
+				<li><a href="">Calendar</a></li>
+				<li><a href="">Prompy</a></li>
+			</ul>
+		</li>
+	</ul> -->
+</div>

@@ -1,0 +1,1 @@
+use(["public/pages/index/store.js","public/pages/index/indexService.js"],function(){function e(e,n){return new VueRoot({template:"public/pages/index/index.html",data:e,store:n,created:function(){},mounted:function(){},methods:{}})}if(module.exports=e,"undefined"!=typeof window){e(storage,store).$mount("#app")}});

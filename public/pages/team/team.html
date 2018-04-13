@@ -1,0 +1,91 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>ue2 web前端团队成员</title>
+        <%- storage %>
+    </head>
+    <body>
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+              <div class="page-component">
+                <div class="page-component__content">
+                  <sliderComponent v-bind:sliderData="sliderData" :platId="platId"></sliderComponent>
+                  <div class="team-page">
+                    <h1 class="team-page__title">认识团队</h1>
+                    <h2>核心团队</h2>
+                    <div class="team-page__members" v-if="members && members.length">
+                      <p>UE2 的团队成员的信息。</p>
+                        <div class="crew" v-for="(crew, index) in members">
+                          <div class="crew__avatar" v-if="crew.avatar">
+                            <img :src="crew.avatar" :alt="crew.name" width="80">
+                          </div>
+                          <div class="crew__avatar" v-else>
+                            <img src="images/avatar.png" :alt="crew.name" width="80">
+                          </div>
+                          <div class="crew__profile" v-if="crew.name">
+                            <h3 class="crew__name" v-text="crew.name"></h3>
+                            <dl>
+                              <dt v-if="crew.focus && crew.focus.length">Core focus</dt>
+                              <dd v-if="crew.focus && crew.focus.length">
+                                <ul>
+                                  <li v-for="focus in crew.focus">
+                                    <a :href="focus.link" v-text="focus.name" target="_blank"></a>
+                                  </li>
+                                </ul>
+                              </dd>
+                              <dt v-if="crew.institute">
+                                <i class="fa fa-briefcase"></i>
+                                <span class="sr-only">Work</span>
+                              </dt>
+                              <dd v-if="crew.institute">{{crew.position}} @ <a :href="crew.institute.link" v-text="crew.institute.name" target="_blank"></a></dd>
+                              <dt v-if="crew.city">
+                                <i class="fa fa-map-marker"></i>
+                                <span class="sr-only">City</span>
+                              </dt>
+                              <dd v-if="crew.city" v-text="crew.city"></dd>
+                              <dt v-if="crew.languages && crew.languages.length">
+                                <i class="fa fa-globe"></i>
+                                <span class="sr-only">Languages</span>
+                              </dt>
+                              <dd class="team-page__language-list" v-if="crew.languages && crew.languages.length">
+                                <ul>
+                                  <li v-for="lang in crew.languages" v-text="lang"></li>
+                                </ul>
+                              </dd>
+                              <dt v-if="crew.links && crew.links.length">
+                                <i class="fa fa-link"></i>
+                                <span class="sr-only">Links</span>
+                              </dt>
+                              <dd v-if="crew.links && crew.links.length">
+                                <ul>
+                                  <li v-for="link in crew.links">
+                                    <a :href="link.href" v-text="link.name" target="_blank"></a>
+                                  </li>
+                                </ul>
+                              </dd>
+                              <footer class="team-page__social" v-if="crew.social">
+                                <a :href="crew.social.github" class="github" v-if="crew.social.github" target="_blank">
+                                  <i class="fa fa-github"></i>
+                                  <span class="sr-only">Github</span>
+                                </a>
+                                <a :href="crew.social.twitter" class="twitter" v-if="crew.social.twitter" target="_blank">
+                                  <i class="fa fa-twitter"></i>
+                                  <span class="sr-only">Twitter</span>
+                                </a>
+                              </footer>
+                            </dl>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

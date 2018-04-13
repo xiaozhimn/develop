@@ -1,0 +1,104 @@
+.slider-component {
+	width: 220px;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	border-right: 1px solid #EAEBFC;
+}
+.slider-component ul {
+	width: 220px;
+}
+.slider-component ul li {
+	width: 220px;
+	padding:5px 0;
+}
+.slider-component>ul>li:first-child {
+	margin-top: 0;
+}
+.slider-component>ul>li>a {
+	font-size: 14px;
+	color: #3F3F5B;
+	line-height: 24px;
+}
+.slider-component>ul>li ul a {
+	display: inline-block;
+	width: 100%;
+	font-size: 14px;
+	color: #8C8EA4;
+	line-height: 18px;
+	padding-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 30px;
+}
+.slider-component>ul>li ul li.active {
+	border-right: 2px solid #5087FB;
+}
+/* .slider-component>ul>li ul li:hover {
+	border-right: 2px solid #5087FB;
+} */
+.slider-component>ul>li ul li.active a {
+	color: #5087FB;
+}
+
+.slider-component .main-item:hover {
+	color: #5087FB;
+	background-image: url("/images/rightHover.svg");
+}
+.slider-component>ul>li .main-item.active:hover,
+.slider-component>ul>li .main-item.opened:hover {
+	color: #5087FB;
+	background-image: url("/images/downHover.svg");
+}
+.slider-component .main-item.closed:hover {
+	color: #5087FB;
+	background-image: url("/images/rightHover.svg");
+}
+.slider-component>ul>li .main-item.opened {
+	background-image: url("/images/down.svg");
+}
+
+.slider-component .main-item{
+	display: inline-block;
+	width:100%;
+	height:18px;
+	line-height:18px;
+	background-image: url("/images/right.svg");
+	background-position: 92% center;
+	background-repeat: no-repeat;
+	background-size: 14px;
+}
+.slider-component .main-item.active {
+	color: #5087FB;
+	background-image: url("/images/downHover.svg");
+}
+.slider-component .main-item.closed {
+	color: #5087FB;
+	background-image: url("/images/rightHover.svg");
+}
+
+.slider-component .team-item.active {
+	color: #5087FB;
+}
+.slider-component .slider__sub-second,
+.slider-component .slider__sub-third {
+	padding-top: 10px !important;
+}
+.slider-component .slider__sub-third>li>a {
+	padding-left: 20px;
+}
+.slider-component .dark {
+	color: #3F3F5B;
+}
+.slider-component a {
+	display: inline-block;
+	width: 100%;
+	padding-right: 50px !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.slider-component a:hover {
+	color: #5087FB;
+}

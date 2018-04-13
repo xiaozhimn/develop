@@ -1,0 +1,1 @@
+var indexService={urls:{getTop20Artical:"/api/v1/getTop10ArticalList",getNewMovieList:"/api/v1/getNewMovieList"},getTop20Artical:function(e){Api.get(this.urls.getTop20Artical,e)},getNewMovieList:function(e){Api.get(this.urls.getNewMovieList,e)}};module.exports=indexService;

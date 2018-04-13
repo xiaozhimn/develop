@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>用户信息</title>
+        <%- storage %>
+    </head>
+    <body>
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+                <div class="page-component">
+                    <div class="page-component__content">
+                        <!--<homesliderComponent></homesliderComponent>-->
+                        <div class="homepage-slider">
+                            <ul>
+                                <li class="active">
+                                    <a href="/userinfo">我的主页</a>
+                                </li>
+                                <li>
+                                    <a href="/homepage">发布的文章</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="userinfo-container">
+                            <dl>
+                                <dt><h2>账户信息</h2></dt>
+                                <dd><span>账户名：</span>{{storage.username}}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

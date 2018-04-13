@@ -1,0 +1,32 @@
+table{
+    text-align: center;
+    font-size:14px;
+}
+.table-bordered{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.table-bordered thead{
+    background: #F7F7FA;
+}
+.table-bordered thead tr{
+    border: 1px solid #EAEBFC;
+}
+.table-bordered th{
+    text-align: center;
+    font-family: PingFangSC-Medium;
+    border: 1px solid #EAEBFC !important;
+    font-size: 14px;
+    color: #3F3F5B;
+}
+
+.table-bordered tr td{
+    text-align: center;
+    border: 1px solid #EAEBFC !important;
+    line-height:30px!important;
+}
+
+.table-pagination{
+    text-align: center;
+    font-size: 14px;
+}

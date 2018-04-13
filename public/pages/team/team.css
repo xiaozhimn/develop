@@ -1,0 +1,123 @@
+.page-component {
+  position: relative;
+  box-sizing: border-box;
+  width: 1140px;
+  padding: 0;
+  margin: 0 auto;
+}
+.page-component__content {
+  padding-left: 270px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.team-page {
+  /* box-sizing: border-box;
+  max-width: 600px; */
+  padding-top: 50px;
+}
+.team-page__members {
+    padding-top: 1.5em;
+    border-top: 1px solid #ddd;
+}
+.crew {
+    display: flex;
+    padding: 25px 0;
+    border-bottom: 1px dotted #ddd;
+}
+.crew__avatar {
+    flex: 0 0 80px;
+}
+.crew__avatar img {
+    border-radius: 50%;
+}
+.crew__profile {
+    padding-left: 26px;
+    flex: 1;
+}
+.crew__name {
+    margin: 0;
+    font-size: 1.3em;
+}
+.crew__profile dl {
+    margin: 0.6em 0 0;
+}
+.crew__profile dt,
+.crew__profile dd,
+.crew__profile ul,
+.crew__profile li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    line-height: 1.3;
+}
+.crew__profile dt {
+    margin-right: 7px;
+    text-transform: uppercase;
+    font-size: 0.84em;
+    font-weight: 600;
+}
+.crew__profile dd {
+    font-weight: 600;
+}
+.crew__profile dd::after {
+    display: block;
+    content: " ";
+    margin-top: 0.6em;
+}
+.crew__profile ul {
+    z-index: 1;
+}
+.crew__profile li {
+    display: inline-block;
+}
+.crew__profile li::after {
+    display: inline-block;
+    content: "·";
+    margin: 0 8px;
+}
+.crew__profile li:last-child::after {
+    content: "";
+}
+.crew__profile dt i {
+    width: 14px;
+    text-align: center;
+}
+.crew__profile dt i.fa-map-marker {
+    font-size: 1.15em;
+}
+.crew__profile dt i.fa-globe {
+    font-size: 1.2em;
+}
+.crew__profile dt i.fa-link {
+    font-size: 1.05em;
+}
+.team-page__social a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    margin-right: 4px;
+}
+.team-page__social i {
+    vertical-align: text-bottom;
+    font-size: 1.3em;
+}
+.team-page__social a.github {
+    color: #000 !important;
+}
+.team-page__social a.twitter {
+    color: #1da1f3 !important;
+}
+
+/* common start */
+.team-page a {
+    color: #5087FB;
+    text-decoration: none;
+}
+.team-page h1 {
+    margin: 0 0 1em;
+}
+.team-page h2 {
+    margin: 45px 0 0.7em;
+}
+/* common end */

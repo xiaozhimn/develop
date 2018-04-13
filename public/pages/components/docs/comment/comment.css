@@ -1,0 +1,151 @@
+.w-e-text-container{
+    border: 1px solid #ccc;
+    border-top: none;
+    height: 100px !important;
+    z-index: 10000;
+}
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.praise{
+    line-height: 16px;
+    color: #d14;
+    float: right;
+    height: 20px;
+    padding-left: 18px;
+
+}
+
+
+.time{
+    line-height: 16px;
+    float: left;
+}
+
+.comment-box .portrait {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%
+}
+
+.comment-box .comment-content {
+    float: left;
+    width: 810px;
+    word-break: break-all;
+}
+.comment-box .comment-content .comment-name{
+    line-height: 14px;
+    color: #93999f;
+}
+
+.comment-box .comment-content  .comment-text{
+    color: #3F3F5B;
+}
+
+.comment-box .comment-content .comment-time {
+    color: #ccc;
+    margin-top: 3px;
+    line-height: 16px;
+    position: relative;
+}
+
+.comment-box:hover {
+    background: rgb(247, 247, 247);
+}
+
+.comment-box {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.showmore{
+    text-align: center;
+    padding: 10px;
+}
+
+
+#comment .btn-default{
+    min-width: 80px;
+    background: #5087FB;
+    border-color: #5087FB;
+    border-radius: 2px;
+    color: #ffffff;
+}
+
+#comment .btn-cancle{
+    min-width: 80px;
+    background: #ffffff;
+    border: 1px solid #5087FB;
+    border-radius: 2px;
+    color: #5087FB;
+}
+#comment button{
+    outline: 0;
+}
+
+#comment .replay{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #93999f;
+    cursor: pointer;
+}
+
+#comment .replay:hover{
+    color: #4F8DF6;
+}
+
+#comment .comment-list{
+    position: relative;
+
+}
+
+
+
+#comment .replay-list .comment-content{
+    width: 770px;
+    word-break: break-all;
+}
+
+
+#comment .replay-box{
+    position: relative;
+    padding: 10px 0 10px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+#comment .replay-box .portrait{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%
+}
+
+#comment .replay-box textarea{
+    padding: 10px;
+    resize: none;
+    width: 95%;
+    box-sizing: border-box;
+    border-color: #e7e7e7;
+}
+
+#comment .replay-box .replay-footer{
+    float: right;
+    padding-top: 10px;
+}
+#comment .replay-box .left-word{
+    position: absolute;
+    font-size: 10px;
+    top: 60px;
+    left: 95%;
+}

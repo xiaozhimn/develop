@@ -1,0 +1,1 @@
+use(["public/pages/userinfo/store.js","public/pages/userinfo/userinfoService.js"],function(){function e(e,o){return new VueRoot({template:"public/pages/userinfo/userinfo.html",data:{storage:e},store:o,created:function(){},mounted:function(){},methods:{}})}if(module.exports=e,"undefined"!=typeof window){e(storage,store).$mount("#app")}});

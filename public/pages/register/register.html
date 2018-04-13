@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>注册</title>
+        <%- storage %>
+    </head>
+    <body>
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+                <div class="main">
+                    <h3 class="text-center">注册</h3>
+                    <form role="form" id="registerForm" autocomplete="off">
+                        <div class="form-group">
+                            <div>
+                                <span class="ico username-ico"></span>
+                                <input type="text" class="form-control" id="username" name="username" v-model="username" placeholder="数字、大小写字母或符号" maxlength="30" @keyup="checkUsernameFormat">
+                                <span class="validateTip">{{usernameFormatTip}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <span class="ico password-ico"></span>
+                                <input type="password" class="form-control" id="password" name="password" v-model="password" placeholder="6-18位，数字、大小写字母和符号" maxlength="18" @blur="checkPasswordFormat" @keydown="clearPasswordTip">
+                                <span class="validateTip">{{passwordStrengthTip}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <span class="ico confirm-password-ico"></span>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" v-model="confirmPassword" placeholder="密码确认" maxlength="18" @blur="confirmPasswordEqual">
+                                <span class="validateTip">{{confirmPasswordTip}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <a href="javascript:;" class="btn btn-default col-sm-12" @click="registerAccount">注册</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

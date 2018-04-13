@@ -1,0 +1,1 @@
+var loginService={urls:{login:"/api/v1/login"},login:function(i,o){Api.post(this.urls.login,i,o)}};module.exports=loginService;

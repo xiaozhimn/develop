@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <%- storage %>
+    </head>
+    <body>
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+                <div id="content-box">
+                    <div class="container" id="content-box">
+                        <div class="page-component">
+                            <div class="page-component-content">
+                                <div class="homepage-slider">
+                                    <ul>
+                                        <li>
+                                            <a href="/userinfo">我的主页</a>
+                                        </li>
+                                        <li>
+                                            <a href="/homepage">发布的文章</a>
+                                        </li>
+                                        <li>
+                                            <a href="/movie">发布视频</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="/movieList">我的视频</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tietuku.com/upload" target="_blank">图片上传</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="navbar-content">
+                                        <span style="float: right;clear:both;margin-bottom:20px">
+                                            <a class="btn btn-success homepage-btn" type="button" href="/movie">发布视频</a>
+                                        </span>
+                                        <tableComponent :movieList="movieList"></tableComponent>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

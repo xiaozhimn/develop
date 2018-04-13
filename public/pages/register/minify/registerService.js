@@ -1,0 +1,1 @@
+var registerService={urls:{register:"/api/v1/regist"},register:function(e,r){Api.post(this.urls.register,e,r)}};module.exports=registerService;

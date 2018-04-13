@@ -1,0 +1,12 @@
+.error-page__panel {
+    /* background: #eee; */
+    padding: 40px 60px;
+    /* border-radius: 6px; */
+    /* width: 40em; */
+    margin: 50px auto;
+    max-width: 100%;
+    text-align: center;
+}
+.error-page__header {
+  padding-bottom: 10px;
+}

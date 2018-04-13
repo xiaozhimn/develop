@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>错误提示</title>
+        <%- storage %>
+    </head>
+    <body>
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+              <div class="error-page__panel">
+                <div class="error-page__header">
+                  <h1>Page Not found</h1>
+                </div>
+                <div class="error-page__body">
+                  <img src="images/404.png" alt="">
+                </div>
+              </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

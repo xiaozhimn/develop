@@ -1,0 +1,1 @@
+var movieListService={urls:{getMovieList:"/api/v1/getMovieList",deleteMovieList:"/api/v1/deleteMovie"},getMovieList:function(e,i){Api.get(this.urls.getMovieList,e,i)},deleteMovieList:function(e,i){Api.get(this.urls.deleteMovieList,e,i)}};module.exports=movieListService;

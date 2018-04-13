@@ -1,0 +1,1 @@
+var tplListService={urls:{getTplMenuList:"/api/v1/getTplMenuList",getTplSigleContent:"/api/v1/getTplSigleContent"},getTplMenuList:function(t){Api.get(this.urls.getTplMenuList,t)},getTplSigleContent:function(t,e){Api.get(this.urls.getTplSigleContent,t,e)}};module.exports=tplListService;

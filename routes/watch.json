@@ -1,0 +1,280 @@
+{
+    "request": [
+        {
+            "type": "get",
+            "route": "/combineAssetsAction/*",
+            "requestName": "combineAssetsAction",
+            "url": "../routes/common/combineAssetsAction"
+        },
+        {
+            "type": "get",
+            "route": "*/components/*",
+            "requestName": "componentsAction",
+            "url": "../routes/common/componentsAction"
+        },
+        {
+            "type": "get",
+            "route": "*/widget/*",
+            "requestName": "widgetAction",
+            "url": "../routes/common/widgetAction"
+        },
+        {
+            "type": "get",
+            "route": "/lessAction/*",
+            "requestName": "lessAction",
+            "url": "../routes/common/lessAction"
+        },
+        {
+            "type": "get",
+            "route": "*/images/*",
+            "requestName": "imageAction",
+            "url": "../routes/common/imageAction"
+        },
+        {
+            "type": "get",
+            "route": "/",
+            "requestName": "index",
+            "url": "../routes/index/index"
+        },
+        {
+            "type": "get",
+            "route": "/login",
+            "requestName": "login",
+            "url": "../routes/login/login"
+        },
+        {
+            "type": "get",
+            "route": "/register",
+            "requestName": "register",
+            "url": "../routes/register/register"
+        },
+        {
+            "type": "post",
+            "route": "/api/v1/regist",
+            "requestName": "userRegister",
+            "url": "../app/controller/userRegister"
+        },
+        {
+            "type": "post",
+            "route": "/api/v1/login",
+            "requestName": "login",
+            "url": "../app/controller/login"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/checkLogin",
+            "requestName": "checkLogin",
+            "url": "../app/controller/checkLogin"
+        },
+        {
+            "type": "post",
+            "route": "/api/v1/publishArtical",
+            "requestName": "publishArtical",
+            "url": "../app/controller/publishArtical"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/deleteSingleArtical",
+            "requestName": "deleteArtical",
+            "url": "../app/controller/deleteArtical"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getSingleArticalContent",
+            "requestName": "getSingleArticalContent",
+            "url": "../app/controller/getSingleArticalContent"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getUserPublishedArticalList",
+            "requestName": "getUserPublishedArticalList",
+            "url": "../app/controller/getUserPublishedArticalList"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/searchUserSelfPublishedArtical",
+            "requestName": "searchUserSelfPublishedArtical",
+            "url": "../app/controller/searchUserSelfPublishedArtical"
+        },
+        {
+            "type": "post",
+            "route": "/api/v1/publishCommentForArtical",
+            "requestName": "publishCommentForArtical",
+            "url": "../app/controller/publishCommentForArtical"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/thumbUpForArtical",
+            "requestName": "thumbUpForArtical",
+            "url": "../app/controller/thumbUpForArtical"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/replyCommenter",
+            "requestName": "replyCommenter",
+            "url": "../app/controller/replyCommenter"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getCommentForArtical",
+            "requestName": "getCommentForArtical",
+            "url": "../app/controller/getCommentForArtical"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getMenuTree",
+            "requestName": "getMenuTree",
+            "url": "../app/controller/getMenuTree"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getTop10ArticalList",
+            "requestName": "getTop10ArticalList",
+            "url": "../app/controller/getTop10ArticalList"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getModule",
+            "requestName": "getModule",
+            "url": "../app/controller/getModule"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getArticalMenuItems",
+            "requestName": "getArticalMenuItems",
+            "url": "../app/controller/getArticalMenuItems"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getPrevAndNextArticalId",
+            "requestName": "getPrevAndNextArticalId",
+            "url": "../app/controller/getPrevAndNextArticalId"
+        },
+        {
+            "type": "post",
+            "route": "/api/v1/publishTpl",
+            "requestName": "publishTpl",
+            "url": "../app/controller/publishTpl"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getTplMenuList",
+            "requestName": "getTplList",
+            "url": "../app/controller/getTplList"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getTplSigleContent",
+            "requestName": "getTplSigleContent",
+            "url": "../app/controller/getTplSigleContent"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/deleteTpl",
+            "requestName": "deleteTpl",
+            "url": "../app/controller/deleteTpl"
+        },
+        {
+            "type": "post",
+            "route": "/api/v1/saveStyleContent",
+            "requestName": "saveStyleContent",
+            "url": "../app/controller/saveStyleContent"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getStyleContent",
+            "requestName": "getStyleContent",
+            "url": "../app/controller/getStyleContent"
+        },
+        {
+            "type": "post",
+            "route": "/api/v1/saveMovie",
+            "requestName": "saveMovie",
+            "url": "../app/controller/saveMovie"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getMovieList",
+            "requestName": "getMovieList",
+            "url": "../app/controller/getMovieList"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/deleteMovie",
+            "requestName": "deleteMovie",
+            "url": "../app/controller/deleteMovie"
+        },
+        {
+            "type": "get",
+            "route": "/api/v1/getNewMovieList",
+            "requestName": "getNewMovieList",
+            "url": "../app/controller/getNewMovieList"
+        },
+        {
+            "type": "get",
+            "route": "/item",
+            "requestName": "item",
+            "url": "../routes/item/item"
+        },
+        {
+            "type": "get",
+            "route": "/homepage",
+            "requestName": "homepage",
+            "url": "../routes/homepage/homepage"
+        },
+        {
+            "type": "get",
+            "route": "/docs",
+            "requestName": "docs",
+            "url": "../routes/docs/docs"
+        },
+        {
+            "type": "get",
+            "route": "/team",
+            "requestName": "team",
+            "url": "../routes/team/team"
+        },
+        {
+            "type": "get",
+            "route": "/userinfo",
+            "requestName": "userinfo",
+            "url": "../routes/userinfo/userinfo"
+        },
+        {
+            "type": "get",
+            "route": "/errorPage",
+            "requestName": "errorPage",
+            "url": "../routes/errorPage/errorPage"
+        },
+        {
+            "type": "get",
+            "route": "/tpl",
+            "requestName": "tpl",
+            "url": "../routes/tpl/tpl"
+        },
+        {
+            "type": "get",
+            "route": "/tplView",
+            "requestName": "tplView",
+            "url": "../routes/tplView/tplView"
+        },
+        {
+            "type": "get",
+            "route": "/tplList",
+            "requestName": "tplList",
+            "url": "../routes/tplList/tplList"
+        },
+        {
+            "type": "get",
+            "route": "/movie",
+            "requestName": "movie",
+            "url": "../routes/movie/movie"
+        },
+        {
+            "type": "get",
+            "route": "/movieList",
+            "requestName": "movieList",
+            "url": "../routes/movieList/movieList"
+        }
+    ]
+}

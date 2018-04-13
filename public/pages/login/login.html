@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>登录</title>
+        <%- storage %>
+    </head>
+    <body>
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+                <div class="main">
+                    <h3 class="text-center">登录</h3>
+                    <div class="form-group">
+                        <div class="username">
+                            <span class="ico username-ico"></span>
+                            <input type="text" class="form-control" id="username" v-model="username" placeholder="请输入用户名"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="password">
+                            <span class="ico password-ico"></span>
+                            <input type="password" class="form-control" id="password" v-model="password" placeholder="请输入密码"/>
+                            <span class="validateTip">{{loginTip}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-login">
+                        <div>
+                            <a href="javascript:;" class="btn btn-default col-md-12" @click="login">登录</a>
+                        </div>
+                    </div>
+                    <form role="form" autocomplete="off">
+                    </form>
+                    <div class="forget-password">
+                        <a href="/register">注册账号</a>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

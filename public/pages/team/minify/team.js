@@ -1,0 +1,1 @@
+use(["public/pages/team/store.js","public/pages/team/teamService.js","public/pages/components/common/slider/slider.js"],function(){function e(e,t,o){return new VueRoot({template:"public/pages/team/team.html",data:e,store:t,created:function(){},mounted:function(){},methods:{}})}if(module.exports=e,"undefined"!=typeof window){e(storage,store).$mount("#app")}});

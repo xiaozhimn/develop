@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <%- storage %>
+    </head>
+    <body>
+        <% include header.html %>
+        <template>
+            <div id="content-box">
+                <div class="container" id="content-box">
+                    <div class="page-component">
+                        <div class="page-component-content">
+                            <!--<homesliderComponent></homesliderComponent>-->
+                            <div class="homepage-slider">
+                                <ul>
+                                    <li>
+                                        <a href="/userinfo">我的主页</a>
+                                    </li>
+                                    <li>
+                                        <a href="/homepage">发布的文章</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="/movie">发布视频</a>
+                                    </li>
+                                    <li>
+                                        <a href="/movieList">我的视频</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tietuku.com/upload" target="_blank">图片上传</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <div class="navbar-content">
+                                    <form id="movie-form" enctype='multipart/form-data'>
+                                        <span style="font-size: 14px;">视频类型</span>
+                                        <div class="dropdown" style="display: inline-block;margin-left: 14px;">
+                                            <input type="hidden" name="type" :value="defaultName"/>
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                {{defaultName}}
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li v-for="item in typeList"><a href="javascript:void(0);" @click="changeType(item)">{{item}}</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3>名称：</h3>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="请输入视频名称">
+                                        </div>
+                                        <h3>描述：</h3>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="desc" id="desc" placeholder="请输入视频描述">
+                                        </div>
+                                        <h3>视频资源：</h3>
+                                        <div class="form-group">
+                                            <input type="file" class="form-control" id="vedio" name="vedio">
+                                        </div>
+                                        <div class="operation-btn-group">
+                                            <button type="button" @click="publish" :disabled="isCanNotClicked" class="btn btn-success">保存</button>
+                                        </div>
+                                     </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

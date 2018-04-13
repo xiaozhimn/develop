@@ -1,0 +1,1 @@
+var store={state:{},actions:{}};module.exports=store;

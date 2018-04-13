@@ -1,0 +1,12 @@
+{
+    "isUseGlobalCache": true,
+    "isServerRender": true,
+    "timestamp": 1523615141396,
+    "serverHost": "localhost",
+    "serverPort": "80",
+    "fileHost": "",
+    "filePort": "",
+    "apiProxyPathKey": "/api/",
+    "fileProxyPathKey": "files/",
+    "loginRoute": "/login"
+}

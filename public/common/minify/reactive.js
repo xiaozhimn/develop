@@ -1,0 +1,1 @@
+window.Reactive=Rx;var productor;Reactive.productor=Rx.Observable.fromPromise,productor=Reactive.productor,window.fetch=function(){arguments=[].slice.call(arguments,0);var r=arguments[0];arguments.splice(0,1);var o=arguments;return new Promise(function(c,e){o.push(function(r){r?c(r):c()}),r.apply(r,o)})},Reactive.productor=function(){return productor.apply(this,arguments)};

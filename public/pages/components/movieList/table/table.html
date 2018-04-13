@@ -1,0 +1,28 @@
+<div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th style="padding: 14px 0;">名称</th>
+            <th style="padding: 14px 0;">描述</th>
+            <th style="padding: 14px 0;">分类</th>
+            <th style="padding: 14px 0;">图片</th>
+            <th style="padding: 14px 0;">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in movieList">
+            <td>{{item.name}}</td>
+            <td>{{item.sourceDesc}}</td>
+            <td>{{item.type}}</td>
+            <td>
+                <a :href="item.url" target="_blank">
+                    <img :src='"file/"+item.pic' width="80" height="60" />
+                </a>
+            </td>
+            <td>
+                <button class="btn btn-link" type="button" @click="deleteMovie(item.id)">删除</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

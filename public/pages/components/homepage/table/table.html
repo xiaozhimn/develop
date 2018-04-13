@@ -1,0 +1,26 @@
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="padding: 14px 0;">序号</th>
+                <th style="padding: 14px 0;">栏目</th>
+                <th style="padding: 14px 0;">名称</th>
+                <th style="padding: 14px 0;">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item in tableBody">
+                <td>{{item.id}}</td>
+                <td>{{item.menuName}}</td>
+                <td>{{item.name}}</td>
+                <td>
+                    <button class="btn btn-link" type="button" @click="edit(item)">编辑</button>
+                    <button class="btn btn-link" type="button" @click="del(item)">删除</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="table-pagination">
+        <ul class="page" currentpage="1" maxshowpageitem="5" pagelistcount="10" id="pagination"></ul>
+    </div>
+</div>

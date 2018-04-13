@@ -1,0 +1,343 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "description": "",
+    "version": "1.0"
+  },
+  "produces": ["application/json"],
+  "host": "118.178.231.7:8006",
+  "basePath": "/api/v1",
+  "paths": {
+    "/regist": {
+      "post": {
+        "tags": ["user"],
+        "description": "用户注册ue2平台",
+        "parameters": [{
+          "name": "username",
+          "in": "body",
+          "description": "用户名",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "password",
+          "in": "body",
+          "description": "用户名",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {"200": {
+           "description": "result: {'errorCode': 0, 'msg': 'sucess', data: true}"
+        }}
+      }
+    },
+    "/login": {
+      "post": {
+        "tags": ["user"],
+        "description": "用户登录ue2平台",
+        "parameters": [{
+          "name": "username",
+          "in": "body",
+          "description": "用户名",
+          "required": true,
+          "type": "string"
+        }, {
+          "name": "password",
+          "in": "body",
+          "description": "用户名",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: true}"
+        }}
+      }
+    },
+    "/checkLogin": {
+      "get": {
+        "tags": ["user"],
+        "description": "校验用户是否已经登录了ue2平台",
+        "parameters": [{
+          "name": "token",
+          "in": "body",
+          "description": "用户令牌",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: true}"
+        }}
+      }
+    },
+    "/publishArtical": {
+      "post": {
+        "tags": ["artical"],
+        "description": "已登录用户发布技术文章",
+        "parameters": [
+          {
+            "name": "articalId",
+            "in": "body",
+            "description": "articalId存在为编辑，不存在为添加",
+            "required": false,
+            "type": "int"
+          },{
+          "name": "platFormId",
+          "in": "body",
+          "description": "栏目id(为最后一级子菜单Id)",
+          "required": true,
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "in": "body",
+          "description": "文章名称",
+          "required": true,
+          "type": "string"
+        },{
+          "name": "desc",
+          "in": "body",
+          "description": "文章描述",
+          "required": true,
+          "type": "string"
+        },{
+          "name": "content",
+          "in": "body",
+          "description": "文章内容",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: true}"
+        }}
+      }
+    },
+    "/deleteSingleArtical": {
+      "get": {
+        "tags": ["artical"],
+        "description": "删除一篇文章",
+        "parameters": [
+          {
+            "name": "articalId",
+            "in": "query",
+            "description": "文章id",
+            "required": true,
+            "type": "int"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "result: {'msg': 'sucess', 'data': true}"
+          }
+        }
+      }
+    },
+    "/searchUserSelfPublishedArtical": {
+      "get": {
+        "tags": ["artical"],
+        "description": "搜索用户自己发布的文章搜索条件为:平台id和搜索关键词",
+        "parameters": [{
+            "name": "currentPage",
+            "in": "query",
+            "description": "当前页数",
+            "required": false,
+            "type": "int"
+          },
+          {
+            "name": "platFormId",
+            "in": "query",
+            "description": "平台Id",
+            "required": false,
+            "type": "int"
+          },
+          {
+            "name": "keyWord",
+            "in": "query",
+            "description": "关键词",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "result: {'msg': 'sucess', 'data': [....], totalCount:10, currentPage:1, pageSize:10}"
+          }
+        }
+      }
+    },
+    "/getSingleArticalContent": {
+      "get": {
+        "tags": ["artical"],
+        "description": "获取谋篇文章的内容",
+        "parameters": [
+          {
+            "name": "articalId",
+            "in": "query",
+            "description": "文章id",
+            "required": true,
+            "type": "int"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "result: {'msg': 'sucess', 'data': content}"
+          }
+        }
+      }
+    },
+    "/getUserPublishedArticalList": {
+      "get": {
+        "tags": ["artical"],
+        "description": "获取用户文章列表",
+        "parameters": [{
+             "name": "currentPage",
+             "in": "query",
+             "description": "当前页数",
+             "required": false,
+             "type": "int"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: [...], totalCount:10, currentPage:1, pageSize:10}"
+        }}
+      }
+    },
+    "/publishCommentForArtical": {
+      "post": {
+        "tags": ["comment"],
+        "description": "评论用户所发布的文章",
+        "parameters": [{
+          "name": "articalId",
+          "in": "body",
+          "description": "文章id",
+          "required": true,
+          "type": "int"
+        },{
+          "name": "content",
+          "in": "body",
+          "description": "评论内容",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: true"
+        }}
+      }
+    },
+    "/replyCommenter": {
+      "post": {
+        "tags": ["comment"],
+        "description": "回复评论者",
+        "parameters": [{
+          "name": "commentId",
+          "in": "body",
+          "description": "评论id",
+          "required": true,
+          "type": "int"
+        },{
+          "name": "content",
+          "in": "body",
+          "description": "回复内容",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: true"
+        }}
+      }
+    },
+    "/getCommentForArtical": {
+      "get": {
+        "tags": ["comment"],
+        "description": "获取谋篇文章的评论内容",
+        "parameters": [{
+          "name": "articalId",
+          "in": "query",
+          "description": "文章数字id",
+          "required": true,
+          "type": "int"
+        },{
+          "name": "currentPage",
+          "in": "query",
+          "description": "当前页数",
+          "required": false,
+          "type": "int"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: [....], totalCount:10, currentPage:1, pageSize:10"
+        }}
+      }
+    },
+    "/thumbUpForArtical": {
+      "get": {
+        "tags": ["comment"],
+        "description": "为某篇文章点赞",
+        "parameters": [{
+          "name": "articalId",
+          "in": "query",
+          "description": "文章id",
+          "required": true,
+          "type": "int"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: true"}}
+      }
+    },
+    "/getMenuTree": {
+      "get": {
+        "tags": ["menu"],
+        "description": "获取网站左侧菜单边栏树结构",
+        "parameters": [],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: [....]"
+        }}
+      }
+    },
+    "/getModule": {
+      "get": {
+        "tags": ["menu"],
+        "description": "获取二级子菜单",
+        "parameters": [{
+            "name": "platId",
+            "in": "query",
+            "description": "父级菜单id",
+            "required": true,
+            "type": "int"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: [....]"
+        }}
+      }
+    },
+    "/getArticalMenuItems": {
+      "get": {
+        "tags": ["menu"],
+        "description": "获取父级菜单下的所有文章菜单和二级子菜单，如果二级子菜单存在可以通过hasNext=true区分",
+        "parameters": [{
+          "name": "platId",
+          "in": "query",
+          "description": "父级菜单id",
+          "required": true,
+          "type": "int"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: [....]"
+        }}
+      }
+    },
+    "/getPrevAndNextArticalId": {
+      "get": {
+        "tags": ["artical"],
+        "description": "获取当前文章的上一篇和下一篇文章id,返回-1表示不存在",
+        "parameters": [{
+          "name": "articalId",
+          "in": "query",
+          "description": "当前文章Id",
+          "required": true,
+          "type": "int"
+        }],
+        "responses": {"200": {
+          "description": "result: {'msg': 'sucess', data: [....]"
+        }}
+      }
+    }
+  }
+}

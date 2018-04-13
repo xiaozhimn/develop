@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>tpl样式组件编辑</title>
+        <%- storage %>
+    </head>
+    <body>
+        <% include header.html %>
+        <link rel="stylesheet" type="text/css" href="../lib/page.css"/>
+        <link rel="stylesheet" href="lib/codemirror.css"/>
+        <link rel="stylesheet" href="lib/mdn-like.css"/>
+        <script src="lib/codemirror.js"></script>
+        <script src="lib/javascript.js"></script>
+        <template>
+            <div id="content-box">
+                <div class="page-component">
+                    <div class="page-component-content">
+                        <!--<homesliderComponent></homesliderComponent>-->
+                        <div class="homepage-slider">
+                            <ul>
+                                <li>
+                                    <a href="/tpl">样式库</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" @click="showSheetStyle">样式文件</a>
+                                </li>
+                                <li v-for="item in menuList">
+                                    <a :href="'/tpl?id='+item.id">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <div class="navbar-content" v-show="isShowTpl">
+                                <div>
+                                    <span>名称: </span><input v-model="name" type="text" class="homepage-input" style="margin-left:20px" placeholder="请输入样式组件名称"/>
+                                    <div stylye="overflow:hidden">
+                                        <span style="float:left">代码: </span><textArea id="code-box" class="code-box" name="code" style="resize:none;display:none">{{tplContent.content}}</textArea>
+                                    </div>
+                                    <div style="margin-left: 55px;margin-top: 20px;overflow:hidden">
+                                         <input style="float:right" type="button" class="btn btn-success" @click="save" value="保存"/>
+                                         <input style="float:right;margin-right:20px" type="button" class="btn" @click="viewTpl" value="预览"/>
+                                         <input style="float:right;margin-right:5px" type="button" class="btn" @click="deleteTpl" value="删除"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div :style='!isShowTpl ? "visibility:visible" : "visibility:hidden"'>
+                                <div class="navbar-content">
+                                    <div>
+                                        <textArea id="style-code" class="code-box style-code" name="styleContent" placeholder="请输入样式库文件内容" style="resize:none;display:none">{{styleContent}}</textArea>
+                                        <div style="margin-left: 55px;margin-top: 20px;overflow:hidden">
+                                            <input style="float:right" type="button" class="btn btn-success" value="保存" @click="saveStyle"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="viewer"></div>
+            </div>
+        </template>
+        <% include footer.html %>
+    </body>
+</html>

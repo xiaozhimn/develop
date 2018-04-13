@@ -1,0 +1,12 @@
+.userinfo-container{
+    padding-top: 65px;
+    h2{
+        font-weight: bold;
+        border-bottom: 1px solid#ddd;
+        padding: 5px 0;
+        margin-bottom: 30px;
+    }
+    dd{
+        padding-left: 40px;
+    }
+}
